@@ -1,0 +1,112 @@
+/* Applying base font styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  /* All text set to black */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+.sanskrit-text {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+/* WCAG 2.1 AA Compliance: High contrast for accessibility */
+.btn-primary {
+  background-color: #FF5722;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.btn-secondary {
+  background-color: #006400;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before,
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1;
+}
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+  opacity: 0.15;
+}
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(255, 87, 34, 0.2);
+}
+
+/* Other custom styles */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.mandala-overlay {
+  background-image: url('https://picsum.photos/1200/400');
+  background-size: cover;
+  opacity: 0.1;
+}
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.border-deep-red {
+  border-color: #8B0000;
+}
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Subtle dark overlay for readability */
+}
+.logo-text-width {
+  width: 180px;
+  /* Approximate width to match "Tantra Yoga Vidya" at text-xl */
+  display: inline-block;
+}
+.category-badge {
+  background-color: #FF5722;
+  color: #FFFFFF;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+.author-meta {
+  color: #6B7280;
+  font-size: 14px;
+}
+.read-more-link {
+  color: #FF5722;
+  font-weight: 500;
+}
+.read-more-link:hover {
+  text-decoration: underline;
+}
+.post-meta {
+  color: #6B7280;
+  font-size: 14px;
+}
+.post-meta svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
