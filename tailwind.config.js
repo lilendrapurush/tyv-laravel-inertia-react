@@ -4,15 +4,30 @@ module.exports = {
     './resources/**/*.blade.php',
     './resources/**/*.js',
     './resources/**/*.jsx',
+    './resources/**/*.ts',
+    './resources/**/*.tsx',     
   ],
   theme: {
     extend: {
       colors: {
-        'deep-orange': '#FF5722',
+        'deep-orange': {
+          DEFAULT: '#FF5722',
+          '50': '#FFF3F0',
+          '100': '#FFE6DD',
+          '200': '#FFD9C8',
+          '300': '#FFCCB3',
+          '400': '#FFBFA9',
+          '500': '#FFB299',
+          '600': '#FFA58E',
+          '700': '#FF9983',
+          '800': '#FF8C78',
+          '900': '#FF7F6D'          
+        },
         'golden': '#FFD700',
         'deep-red': '#8B0000',
         'deep-green': '#006400',
         'very-dark-gray': '#2D2F36', // Darker gray for footer
+        // 'text-deep-orange': '#FF5722',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

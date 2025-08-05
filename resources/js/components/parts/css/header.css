@@ -1,0 +1,12 @@
+/* resources/js/Components/Header/Header.module.css */
+.header-container {
+  @apply bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm;
+}
+
+.nav-link {
+  @apply hover:text-deep-orange transition-colors;
+}
+
+.mobile-menu {
+  @apply hidden lg:hidden bg-white border-t border-gray-200;
+}
